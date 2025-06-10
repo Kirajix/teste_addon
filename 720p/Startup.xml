@@ -1,0 +1,8 @@
+<window>
+    <controls>
+        <control type="label">
+            <label>Bem-vindo à skin!</label>
+            <left>100</left><top>100</top>
+        </control>
+    </controls>
+</window>

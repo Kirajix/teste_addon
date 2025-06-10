@@ -1,0 +1,62 @@
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+
+    <controls>
+        <!-- Fundo -->
+        <control type="image">
+            <left>0</left><top>0</top>
+            <width>1280</width><height>720</height>
+            <texture>background.jpg</texture> <!-- Opcional -->
+        </control>
+
+        <!-- Lista de menu -->
+        <control type="list" id="9000">
+            <left>50</left><top>200</top>
+            <width>300</width><height>300</height>
+            <onleft>9000</onleft><onright>9000</onright>
+            <onup>9000</onup><ondown>9000</ondown>
+            <pagecontrol>9001</pagecontrol>
+
+            <itemlayout height="40">
+                <control type="label">
+                    <left>10</left><top>0</top>
+                    <height>40</height><width>280</width>
+                    <label>$INFO[ListItem.Label]</label>
+                    <textcolor>white</textcolor>
+                </control>
+            </itemlayout>
+
+            <focusedlayout height="40">
+                <control type="label">
+                    <left>10</left><top>0</top>
+                    <height>40</height><width>280</width>
+                    <label>$INFO[ListItem.Label]</label>
+                    <textcolor>yellow</textcolor>
+                </control>
+            </focusedlayout>
+
+            <content>
+                <item><label>Jogo 1</label></item>
+                <item><label>Jogo 2</label></item>
+                <item><label>Jogo 3</label></item>
+                <item><label>Jogo 4</label></item>
+            </content>
+        </control>
+
+        <!-- Indicador de página (opcional) -->
+        <control type="scrollbar" id="9001">
+            <left>350</left><top>200</top>
+            <width>10</width><height>300</height>
+            <orientation>vertical</orientation>
+            <targetcontrol>9000</targetcontrol>
+        </control>
+
+        <!-- Texto indicando item selecionado -->
+        <control type="label">
+            <left>400</left><top>200</top>
+            <label>Selecionado: $INFO[Container(9000).ListItem.Label]</label>
+            <textcolor>white</textcolor>
+            <font>font13</font>
+        </control>
+    </controls>
+</window>
